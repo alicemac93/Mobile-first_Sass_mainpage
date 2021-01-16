@@ -1,8 +1,105 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+body {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+section {
+  padding: 15% 10% 0;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #9194a1;
+  padding: 10% 0;
+}
+
+header {
+  position: relative;
+  height: 10%;
+}
+
+.logo {
+  position: absolute;
+  left: 2%;
+  top: 5%;
+}
+
+.faq-text {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.blueBtn {
+  background-color: #5368df;
+  color: white;
+}
+
+button {
+  box-shadow: 2px 3px 5px 1px #bdbdbd;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+.faq-bottom li {
+  padding: 2% 0;
+}
+
+/*
+.extensions {
+    display: flex;
+    flex-direction: column;
+*/
+.extension {
+  padding: 10% 0;
+  margin: 50px auto;
+  width: 280px;
+  box-shadow: 2px 3px 10px 1px #d5dfe4;
+  position: relative;
+}
+.extension:after {
+  content: url("./images/bg-dots.svg");
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+}
+.extension button {
+  margin-top: 50px;
+}
+
+.signup-top {
+  background-color: #5368df;
+}
+
+.footer-top {
+  background-color: #252b46;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

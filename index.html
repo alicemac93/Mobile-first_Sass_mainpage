@@ -11,7 +11,7 @@
 <body>
 
   <header>
-    <img src="./images/logo-bookmark.svg" alt="">
+    <img class="logo" src="./images/logo-bookmark.svg" alt="">
     
     <div class="desktop-nav">
       <a href="">Features</a>
@@ -28,17 +28,19 @@
 
 <section id="intro">
   <div class="intro-content">
+    <img class="responsive" src="./images/illustration-hero.svg" alt="main image"/>
     <h1>A Simple Bookmark Manager</h1>
     <p>A clean and simple interface to organize your favourite websites. Open a new 
       browser tab and see your sites load instantly. Try it for free.
     </p>
     <div class="buttons">
-      <button>Get it on Chrome</button>
+      <button class="blueBtn">Get it on Chrome</button>
       <button>Get it on Firefox</button>
     </div>
   </div>
   <div class="main">
 </section>
+
 <section class="features">
   <div class="features-top">
     <h2>Features</h2>
@@ -54,30 +56,30 @@
 
       <div class="cta-content">
         <div class="features-tab-1 active">
-           <img src="./images/illustration-features-tab-1.svg" alt="">
+           <img class="responsive" src="./images/illustration-features-tab-1.svg" alt="">
            <div class="features-tab-content">
              <h2>Bookmark in one click</h2>
              <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
              gives you complete control over how you manage your favourite sites.</p>
-             <button class="features-cta bluebtn">More Info</button>
+             <button class="features-cta blueBtn">More Info</button>
             </div>
           </div>
         <div class="features-tab-2">
-          <img src="./images/illustration-features-tab-2.svg" alt="">
+          <img class="responsive" src="./images/illustration-features-tab-2.svg" alt="">
           <div class="features-tab-content">
             <h2>Intelligent search</h2>
             <p> Our powerful search feature will help you find saved sites in no time at all. 
               No need to trawl through all of your bookmarks.</p>
-            <button class="features-cta">More Info</button>
+            <button class="features-cta blueBtn">More Info</button>
           </div>
         </div>
         <div class="features-tab-3">
-          <img src="./images/illustration-features-tab-3.svg" alt="">
+          <img class="responsive" src="./images/illustration-features-tab-3.svg" alt="">
           <div class="features-tab-content">
             <h2>Share your bookmarks</h2>
             <p>Easily share your bookmarks and collections with others. Create a shareable 
               link that you can send at the click of a button.</p>
-            <button class="features-cta">More Info</button>
+            <button class="features-cta blueBtn">More Info</button>
           </div>
         </div>
       </div>
@@ -95,19 +97,19 @@
         <img src="./images/logo-chrome.svg" alt="">
         <h3>Add to Chrome</h3>
         <p>Minimum version 62</p>
-        <button class="cta-extensions">Add & Install Extension</button>
+        <button class="cta-extensions blueBtn">Add & Install Extension</button>
       </div>
       <div class="extension firefox">
         <img src="./images/logo-firefox.svg" alt="">
         <h3>Add to Firefox</h3>
         <p>Minimum version 55</p>
-        <button class="cta-extensions">Add & Install Extension</button>
+        <button class="cta-extensions blueBtn">Add & Install Extension</button>
       </div>
       <div class="extension opera">
         <img src="./images/logo-opera.svg" alt="">
         <h3>Add to Opera</h3>
         <p>Minimum version 46</p>
-        <button class="cta-extensions">Add & Install Extension</button>
+        <button class="cta-extensions blueBtn">Add & Install Extension</button>
       </div>
     </div>
   </section>
@@ -119,39 +121,31 @@
     </div>
     <div class="faq-bottom">
       <ul>
-        <li class="faq-item">
-          <a href="#" id="faq-trigger"><span>What is Bookmark?</span><img src="./images/icon-arrow.svg" alt=""></a>
-          <div class="faq-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+        <li class="faq-item_1">
+          <span class="faq-trigger">What is Bookmark?<img src="./images/icon-arrow.svg" alt=""></span>
+          <p class="faq-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
               justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
-          </div>
         </li>
-        <li class="faq-item">
-          <a href="#" id="faq-trigger"><span>How can I request a new browser?</span><img src="./images/icon-arrow.svg" alt=""></a>
-          <div class="faq-content">
-            <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+        <li class="faq-item_2">
+          <span class="faq-trigger">How can I request a new browser?<img src="./images/icon-arrow.svg" alt=""></span>
+            <p class="faq-text">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
               Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
               ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
               Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
-          </div>
         </li>
-        <li class="faq-item">
-          <a href="#" id="faq-trigger"><span>Is there a mobile app?</span><img src="./images/icon-arrow.svg" alt=""></a>
-          <div class="faq-content">
-            <p> Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+        <li class="faq-item_3">
+          <span class="faq-trigger">Is there a mobile app?<img src="./images/icon-arrow.svg" alt=""></span>
+            <p class="faq-text">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
               urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
               sollicitudin ex et ultricies bibendum.</p>
-          </div>
         </li>
-        <li class="faq-item">
-          <a href="#" id="faq-trigger"><span> What about other Chromium browsers?</span><img src="./images/icon-arrow.svg" alt=""></a>
-          <div class="faq-content">
-            <p>  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+        <li class="faq-item_4">
+          <span class="faq-trigger"> What about other Chromium browsers?<img src="./images/icon-arrow.svg" alt=""></span>
+            <p class="faq-text">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
               vitae neque eget nisl gravida pellentesque non ut velit.</p>
-          </div>
         </li>
       </ul>
-      <button class="faq-cta bluebtn">More Info</button>
+      <button class="faq-cta blueBtn">More Info</button>
     </div>
   </section>
   
@@ -168,6 +162,7 @@
   
   <footer>
     <div class="footer-top">
+    <img src="images/logo-bookmark.svg" alt="logo" />
     <a href="">Features</a> 
     <a href="">Pricing</a> 
     <a href="">Contact</a>
@@ -179,5 +174,6 @@
     </p>
   </div>
   </footer>
+  <script src="./main.js"></script>
 </body>
 </html>
