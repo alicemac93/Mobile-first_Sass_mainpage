@@ -16,27 +16,49 @@ section {
   padding: 15% 10% 0;
 }
 
-.responsive {
-  width: 100%;
-  height: auto;
+header {
+  position: relative;
+  height: 10%;
+}
+
+button {
+  box-shadow: 2px 3px 5px 1px #bdbdbd;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
 }
 
 p {
   font-size: 18px;
   font-weight: 400;
   color: #9194a1;
-  padding: 10% 0;
+  padding: 20px 0;
 }
 
-header {
-  position: relative;
-  height: 10%;
+.responsive {
+  width: 100%;
+  height: auto;
 }
 
 .logo {
   position: absolute;
   left: 2%;
   top: 5%;
+}
+
+.faq .faq-trigger {
+  width: 100%;
+}
+.faq .faq-bottom li {
+  padding: 5% 0;
+  border-bottom: 0.5px solid lightgrey;
+  text-align: left;
+  position: relative;
+}
+.faq .faq-bottom li:before {
+  content: url("./images/icon-arrow.svg");
+  position: absolute;
+  right: 0;
 }
 
 .faq-text {
@@ -50,17 +72,6 @@ header {
 .blueBtn {
   background-color: #5368df;
   color: white;
-}
-
-button {
-  box-shadow: 2px 3px 5px 1px #bdbdbd;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-}
-
-.faq-bottom li {
-  padding: 2% 0;
 }
 
 /*
@@ -85,8 +96,34 @@ button {
   margin-top: 50px;
 }
 
-.signup-top {
+.signup {
   background-color: #5368df;
+  padding: 5% 10%;
+  color: white;
+  margin-top: 60px;
+}
+.signup .signup-top {
+  padding: 30px 0;
+}
+.signup .signup-top p {
+  font-size: 10px;
+  color: white;
+  letter-spacing: 3px;
+}
+.signup form {
+  display: flex;
+  flex-direction: column;
+}
+.signup input {
+  height: 28px;
+  padding-left: 10px;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 10px;
+}
+.signup .redBtn {
+  background-color: #fa5757;
+  color: white;
 }
 
 .footer-top {
@@ -94,6 +131,21 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.footer-top a {
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.footer-top svg {
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.footer-top svg .svgcolor {
+  fill: white;
 }
 
 @media screen and (max-width: 1024px) {

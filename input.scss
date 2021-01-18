@@ -15,36 +15,10 @@ section {
     padding: 15% 10% 0;
 
 }
-.responsive {
-    width: 100%;
-    height: auto;
-}
-p {
-    font-size: 18px;
-    font-weight: 400;
-    color: hsl(229, 8%, 60%);
-    padding: 10% 0; // suree?? 
-}
+
 header { 
     position: relative;
     height: 10%;
-}
-
-.logo {
-    position: absolute;
-    left: 2%;
-    top: 5%;
-}
-.faq-text {
-    display: none;
-}
-.active {
-    display: block
-}
-
-.blueBtn {
-    background-color: hsl(231, 69%, 60%);
-    color: white;
 }
 
 button {
@@ -53,10 +27,51 @@ button {
     border:none;
     border-radius: 3px;
 }
-
-.faq-bottom li {
-    padding: 2% 0;
+p {
+    font-size: 18px;
+    font-weight: 400;
+    color: hsl(229, 8%, 60%);
+    padding: 20px 0;
 }
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+.logo {
+    position: absolute;
+    left: 2%;
+    top: 5%;
+}
+.faq{
+
+    .faq-trigger {
+        width:100%;
+    }
+    .faq-bottom li {
+        padding: 5% 0;
+        border-bottom: 0.5px solid lightgrey;
+        text-align: left;
+        position: relative;
+        &:before{
+        content: url("./images/icon-arrow.svg");
+        position: absolute;
+        right: 0;}
+    }
+}
+.faq-text {
+    display: none;
+}
+.active {
+    display: block;
+}
+
+.blueBtn {
+    background-color: hsl(231, 69%, 60%);
+    color: white;
+}
+
+
 /*
 .extensions {
     display: flex;
@@ -80,14 +95,54 @@ button {
     }
 }
 
-.signup-top {
+.signup {
     background-color: hsl(231, 69%, 60%);
+    padding: 5% 10%;
+    color: white;
+    margin-top: 60px;
+    .signup-top {
+        padding: 30px 0;
+    p {
+        font-size: 10px;
+        color: white;
+        letter-spacing: 3px;
+    }}
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        height: 28px;
+        padding-left: 10px;
+        border-radius: 3px;
+        border: none;
+        margin-bottom: 10px;
+    }
+    .redBtn{
+        background-color: hsl(0, 94%, 66%); // use it as mixin colours on top?
+        color: white;
+    }
 }
+
 .footer-top {
     background-color: hsl(229, 31%, 21%);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    a {
+        padding: 10px 0;
+        color: white;
+        text-decoration: none;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    svg {
+        margin: 0 auto;
+        padding: 20px 0;
+        .svgcolor {
+            fill: white
+        }}
 }
 
 @media screen and (max-width: 1024px){

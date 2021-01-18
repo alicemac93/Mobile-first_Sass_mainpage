@@ -6,6 +6,7 @@ const showFaq = (e) => {
     for (let i = 0; i < faqText.length; i++){
         if (faqText[i].parentNode === triggerParent){
             faqText[i].classList.toggle("active");
+            
         }
     }
 }
