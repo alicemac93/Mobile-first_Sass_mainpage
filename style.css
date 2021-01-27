@@ -4,17 +4,22 @@
   margin: 0;
 }
 
-ul {
-  padding: 0;
-}
-
 body {
   text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
 }
 
 h2 {
   padding: 20px 0;
   font-weight: 700;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
@@ -43,6 +48,18 @@ p, h3 {
   color: #9194a1;
 }
 
+.buttons button:hover {
+  background-color: white;
+  color: black;
+}
+.buttons button:hover:first-child {
+  color: #5368df;
+  border: #5368df 2px solid;
+}
+.buttons button:hover:last-child:hover {
+  border: lightgrey 2px solid;
+}
+
 .responsive {
   max-width: 100%;
   height: auto;
@@ -50,7 +67,7 @@ p, h3 {
 
 .logo {
   position: absolute;
-  left: 20px;
+  left: 10%;
   top: 20px;
 }
 
@@ -59,13 +76,17 @@ p, h3 {
   padding: 10px 0;
 }
 
+.activeSlide {
+  display: inline-flex;
+}
+
 .activeTrigger {
   display: block;
   position: relative;
 }
 .activeTrigger:after {
   content: "";
-  border-bottom: red 2px solid;
+  border-bottom: #fa5757 2px solid;
   width: 50%;
   position: absolute;
   left: 0;
@@ -77,6 +98,11 @@ p, h3 {
 .features {
   display: none;
   margin-top: 60px;
+}
+.features p {
+  padding: 0 10%;
+  line-height: 2;
+  text-align: left;
 }
 
 .faq .faq-trigger {
@@ -109,11 +135,6 @@ p, h3 {
   color: white;
 }
 
-/*
-.extensions {
-    display: flex;
-    flex-direction: column;
-*/
 .extension {
   padding: 30px 0;
   margin: 50px auto;
@@ -129,6 +150,9 @@ p, h3 {
 }
 .extension button {
   margin-top: 50px;
+}
+.extension img {
+  padding: 30px 0;
 }
 
 .signup {
@@ -189,6 +213,34 @@ p, h3 {
   }
 }
 @media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .desktop-nav {
+    padding-right: 15%;
+    padding-top: 30px;
+  }
+  .desktop-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+  }
+  .desktop-nav a:hover {
+    color: #fa5757;
+  }
+  .desktop-nav a:last-child {
+    border: 2px solid #fa5757;
+    border-radius: 6px;
+    padding: 8px 15px;
+  }
+  .desktop-nav a:last-child:hover {
+    color: #fa5757;
+    box-shadow: 2px 2px 5px 1px #bdbdbd;
+  }
+
   section {
     padding: 5% 10% 0;
   }
@@ -210,9 +262,14 @@ p, h3 {
   .tab-tigger {
     padding: 20px 30px;
   }
+  .tab-tigger:hover {
+    color: #fa5757;
+    cursor: pointer;
+  }
 
   .intro {
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
   .intro img {
     height: 370px;
@@ -221,11 +278,15 @@ p, h3 {
   .intro .intro-content {
     text-align: left;
     display: block;
+    align-self: center;
+    width: 40%;
   }
 
   .faq-bottom, h3 {
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
+    line-height: 2;
+    padding: 2% 0;
   }
 }
 
