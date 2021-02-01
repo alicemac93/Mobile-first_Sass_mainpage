@@ -20,13 +20,21 @@
       <a href="">Login</a>
     </div>
 
-  <div class="mobile-nav">
-
+  <div class="mobile-nav-container">
+    <img src="./images/icon-hamburger.svg" alt="">
+    <div class="mobile-nav">
+      <ul>
+        <li href="">Features</li>
+        <li href="">Pricing</li>
+        <li href="">Contact</li>
+        <li href="">Login</li>
+      </ul>
+    </div>
   </div>
 
   </header>
 
-<section class="intro">
+<section class="intro bg">
   <img class="responsive" src="./images/illustration-hero.svg" alt="main image"/>
   <div class="intro-content">
     <h1>A Simple Bookmark Manager</h1>
@@ -40,7 +48,7 @@
   </div>
 </section>
 
-<section class="features-container">
+<section class="features-container bg">
   <div class="features-top">
     <h2>Features</h2>
     <h3>Our aim is to make it quick and easy for you to access your favourite websites. 
@@ -92,19 +100,23 @@
         got a favourite you’d like us to prioritize.</h3>
     </div>
     <div class="extensions-bottom">
-
+      <div class="extension-wrapper">
       <div class="extension chrome">
         <img src="./images/logo-chrome.svg" alt="">
         <h3>Add to Chrome</h3>
         <p>Minimum version 62</p>
         <button class="cta-extensions blueBtn">Add & Install Extension</button>
       </div>
+    </div>
+      <div class="extension-wrapper">
       <div class="extension firefox">
         <img src="./images/logo-firefox.svg" alt="">
         <h3>Add to Firefox</h3>
         <p>Minimum version 55</p>
         <button class="cta-extensions blueBtn">Add & Install Extension</button>
       </div>
+    </div>
+      <div class="extension-wrapper">
       <div class="extension opera">
         <img src="./images/logo-opera.svg" alt="">
         <h3>Add to Opera</h3>
@@ -112,6 +124,7 @@
         <button class="cta-extensions blueBtn">Add & Install Extension</button>
       </div>
     </div>
+  </div>
   </section>
   <section class="faq">
     <div class="faq-top">
@@ -125,6 +138,7 @@
           <span class="faq-trigger">What is Bookmark?</span>
           <p class="faq-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
               justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+          <img class="arrow" src="./images/icon-arrow.svg" alt="showmore arrow">
         </li>
         <li class="faq-item_2 fi">
           <span class="faq-trigger">How can I request a new browser?</span>
@@ -132,17 +146,20 @@
               Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
               ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
               Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+              <img class="arrow" src="./images/icon-arrow.svg" alt="showmore arrow">
         </li>
         <li class="faq-item_3 fi">
           <span class="faq-trigger">Is there a mobile app?</span>
             <p class="faq-text">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
               urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
               sollicitudin ex et ultricies bibendum.</p>
+              <img class="arrow" src="./images/icon-arrow.svg" alt="showmore arrow">
         </li>
         <li class="faq-item_4 fi">
           <span class="faq-trigger"> What about other Chromium browsers?</span>
             <p class="faq-text">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
               vitae neque eget nisl gravida pellentesque non ut velit.</p>
+              <img class="arrow" src="./images/icon-arrow.svg" alt="showmore arrow">
         </li>
       </ul>
       <button class="faq-cta blueBtn">More Info</button>
@@ -155,8 +172,10 @@
     <h2>Stay up-to-date with what we’re doing</h2>
     </div>
     <form action="" method="post">
+      <div class="input-wrapper">
       <input type="text" placeholder="example@email/com"></input>
       <input class="redBtn" value="Contact us" type="submit" ></input>
+    </div>
     </form>
   </section>
   

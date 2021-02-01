@@ -47,6 +47,11 @@ p, h3 {
     color: hsl(229, 8%, 60%);
 }
 
+.logo {
+    position: absolute;
+    left: 10%;
+    top: 20px;
+}
 .buttons {
     button:hover {
         background-color: white;
@@ -64,10 +69,19 @@ p, h3 {
     max-width: 100%;
     height: auto;
 }
-.logo {
-    position: absolute;
-    left: 10%;
-    top: 20px;
+.mobile-nav-container {
+    position: relative;
+    img {
+        position: absolute;
+        right: 8%;
+        top: 20px
+    }
+    .mobile-nav {
+        display: none;
+    }
+}
+.intro-content{
+    padding-top: 10%;
 }
 .tab-tigger {
     border-bottom: lightgrey 0.5px solid;
@@ -100,6 +114,17 @@ p, h3 {
         text-align: left;
     }
 }
+.bg::after {
+    content:"";
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: -5;
+    border-bottom-left-radius:  40%;
+    background-color: $blue-color;
+    width: 300px;
+    height: 190px;
+}
 
 .faq{
     .faq-trigger {
@@ -110,11 +135,20 @@ p, h3 {
         border-bottom: 0.5px solid lightgrey;
         text-align: left;
         position: relative;
-        &:before{
-        content: url("./images/icon-arrow.svg");
-        position: absolute;
-        right: 0;}
     }
+}
+.arrow {
+    position: absolute;
+    right: 0;
+}
+
+.arrow-active{
+   transform: rotate(180deg); // why does this work only on rotating down but not back up?
+   transition: all 600ms;
+   top: 25px;
+    path {
+    fill: $red-color;
+   }
 }
 .faq-text {
     display: none;
@@ -129,11 +163,13 @@ p, h3 {
     background-color: $blue-color;
     color: white;
 }
-
+.extension-wrapper {
+    margin: 50px auto;
+}
 .extension {
     padding: 30px 0;    
-    margin: 50px auto;
     width: 280px;
+    margin: 0 auto;
     box-shadow: 2px 3px 10px 1px #d5dfe4;
     position: relative;
     &:after{
@@ -162,7 +198,7 @@ p, h3 {
         color: white;
         letter-spacing: 3px;
     }}
-    form {
+    .input-wrapper {
         display: flex;
         flex-direction: column;
     }
@@ -195,8 +231,8 @@ p, h3 {
     svg {
         margin: 0 auto;
         padding: 20px 0;
-        .svgcolor {
-            fill: yellow
+        g .svgcolor {// why does this work only when the g is next to svg but not nested? 
+            fill: white
         }}
 }
 
@@ -236,6 +272,31 @@ section{
 .intro, .extensions-bottom {
     display: flex;
     margin: 0 auto;}
+.intro {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    img { 
+        height: 370px;
+        width: auto;
+        flex-shrink: 2}
+    .intro-content{
+        text-align: left;
+        display: block;
+        align-self: center;
+        width: 40%;
+    }
+}
+.bg::after {
+    content:"";
+    position: absolute;
+    top: 250px;
+    right: 0;
+    z-index: -5;
+    border-bottom-left-radius:  40%;
+    background-color: $blue-color;
+    width: 500px;
+    height: 350px;
+}
 .features {
     display: inline-flex;}
 .features-items{   
@@ -249,23 +310,27 @@ section{
         cursor: pointer;
     }
 }
-.intro {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    img { 
-        height: 370px;
-        width: auto}
-    .intro-content{
-        text-align: left;
-        display: block;
-        align-self: center;
-        width: 40%;
-    }
+.extension-wrapper {
+    margin: 0 auto; 
+}
+.chrome {
+    margin-top: -50px;
+}
+.opera {
+    margin-top: 50px;
 }
 .faq-bottom, h3{
     width: 45%;
     margin: 0 auto;
     line-height: 2;
     padding: 2% 0;
-}}
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 0 auto;
+}
+
+}
 

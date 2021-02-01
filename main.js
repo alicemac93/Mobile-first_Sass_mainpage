@@ -2,15 +2,20 @@
 const faqTrigger = document.querySelectorAll(".faq-trigger");
 const faqText = document.querySelectorAll(".faq-text");
 const fawcontainer = document.querySelectorAll(".fi");
-
+const arrow = document.querySelectorAll(".arrow");
+console.log(arrow);
 
 const showFaq = (e) => {
-    console.log(e.target)
-  
+    const  trig = e.target;
     const triggerParent = e.target.parentNode;
     for (let i = 0; i < faqText.length; i++){
-        if (faqText[i].parentNode === triggerParent){
-            faqText[i].classList.toggle("active");           
+        if (faqText[i].parentNode === triggerParent || faqText[i].parentNode === trig){
+            faqText[i].classList.toggle("active");    
+            const arrowparent = faqText[i].parentNode;
+            for (let i = 0; i < arrow.length; i++){ // there is probably 100 ways how to do this more effectively..
+                if(arrow[i].parentNode === arrowparent) {arrow[i].classList.toggle("arrow-active") 
+            }
+              }    
         }
     }
 }
@@ -54,3 +59,4 @@ function showSlides(n) {
 for (let i = 0; i < triggers.length; i++){
     triggers[i].addEventListener("click", showSlides);
 }
+

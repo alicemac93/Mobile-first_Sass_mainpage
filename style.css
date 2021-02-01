@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Rubik", sans-serif;
   padding: 0;
@@ -48,6 +49,12 @@ p, h3 {
   color: #9194a1;
 }
 
+.logo {
+  position: absolute;
+  left: 10%;
+  top: 20px;
+}
+
 .buttons button:hover {
   background-color: white;
   color: black;
@@ -65,10 +72,20 @@ p, h3 {
   height: auto;
 }
 
-.logo {
+.mobile-nav-container {
+  position: relative;
+}
+.mobile-nav-container img {
   position: absolute;
-  left: 10%;
+  right: 8%;
   top: 20px;
+}
+.mobile-nav-container .mobile-nav {
+  display: none;
+}
+
+.intro-content {
+  padding-top: 10%;
 }
 
 .tab-tigger {
@@ -105,6 +122,18 @@ p, h3 {
   text-align: left;
 }
 
+.bg::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 0;
+  z-index: -5;
+  border-bottom-left-radius: 40%;
+  background-color: #5368df;
+  width: 300px;
+  height: 190px;
+}
+
 .faq .faq-trigger {
   width: 100%;
 }
@@ -114,10 +143,19 @@ p, h3 {
   text-align: left;
   position: relative;
 }
-.faq .faq-bottom li:before {
-  content: url("./images/icon-arrow.svg");
+
+.arrow {
   position: absolute;
   right: 0;
+}
+
+.arrow-active {
+  transform: rotate(180deg);
+  transition: all 600ms;
+  top: 25px;
+}
+.arrow-active path {
+  fill: #fa5757;
 }
 
 .faq-text {
@@ -135,10 +173,14 @@ p, h3 {
   color: white;
 }
 
+.extension-wrapper {
+  margin: 50px auto;
+}
+
 .extension {
   padding: 30px 0;
-  margin: 50px auto;
   width: 280px;
+  margin: 0 auto;
   box-shadow: 2px 3px 10px 1px #d5dfe4;
   position: relative;
 }
@@ -169,7 +211,7 @@ p, h3 {
   color: white;
   letter-spacing: 3px;
 }
-.signup form {
+.signup .input-wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -203,8 +245,8 @@ p, h3 {
   margin: 0 auto;
   padding: 20px 0;
 }
-.footer-top svg .svgcolor {
-  fill: yellow;
+.footer-top svg g .svgcolor {
+  fill: white;
 }
 
 @media screen and (max-width: 1024px) {
@@ -250,6 +292,34 @@ p, h3 {
     margin: 0 auto;
   }
 
+  .intro {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .intro img {
+    height: 370px;
+    width: auto;
+    flex-shrink: 2;
+  }
+  .intro .intro-content {
+    text-align: left;
+    display: block;
+    align-self: center;
+    width: 40%;
+  }
+
+  .bg::after {
+    content: "";
+    position: absolute;
+    top: 250px;
+    right: 0;
+    z-index: -5;
+    border-bottom-left-radius: 40%;
+    background-color: #5368df;
+    width: 500px;
+    height: 350px;
+  }
+
   .features {
     display: inline-flex;
   }
@@ -267,19 +337,16 @@ p, h3 {
     cursor: pointer;
   }
 
-  .intro {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  .extension-wrapper  {
+    margin: 0 auto;
   }
-  .intro img {
-    height: 370px;
-    width: auto;
+
+  .chrome {
+    margin-top: -50px;
   }
-  .intro .intro-content {
-    text-align: left;
-    display: block;
-    align-self: center;
-    width: 40%;
+
+  .opera {
+    margin-top: 50px;
   }
 
   .faq-bottom, h3 {
@@ -287,6 +354,13 @@ p, h3 {
     margin: 0 auto;
     line-height: 2;
     padding: 2% 0;
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
